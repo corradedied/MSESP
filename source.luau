@@ -789,7 +789,7 @@ local Components = {}; do
 						string.format("Visible; expected boolean, got %s", typeof(value))
 					);
 
-					Billboard.Enabled = value;
+					SetBillboardProp(Billboard, "Enabled", value == true and Library.GlobalConfig.Billboards == true);
 				else
 					rawset(BillboardData, key, value);
 				end
